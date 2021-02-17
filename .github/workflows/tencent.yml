@@ -16,6 +16,8 @@
 name: Tencent Kubernetes Engine
 
 on:
+  push:
+    branches: [ main ]
   release:
     types: [created]
 
