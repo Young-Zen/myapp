@@ -1,3 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
 commonLabels:
   app: myapp
   env: test
@@ -8,7 +11,9 @@ resources:
 
 namespace: yhj
 
+patchesStrategicMerge:
+- deployment.yaml
 images:
-- name: myapp
+- name: nginx
   newName: nginx
   newTag: 1.14.2
