@@ -12,6 +12,8 @@ spec:
       labels:
         app: myapp
     spec:
+      imagePullSecrets:
+      - name: qcloudregistrykey
       containers:
       - name: myapp
         image: nginx:1.14.2
