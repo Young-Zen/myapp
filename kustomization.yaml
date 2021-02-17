@@ -1,4 +1,5 @@
 commonLabels:
+  app: myapp
   env: test
 
 resources:
@@ -6,3 +7,8 @@ resources:
 - service.yaml
 
 namespace: yhj
+
+images:
+- name: myapp
+  newName: nginx
+  newTag: 1.14.2
