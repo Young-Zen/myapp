@@ -1,0 +1,8 @@
+commonLabels:
+  env: test
+
+resources:
+- deployment.yaml
+- service.yaml
+
+namespace: yhj
