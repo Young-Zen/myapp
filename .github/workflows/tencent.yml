@@ -72,7 +72,7 @@ jobs:
     # Deploy the Docker image to the TKE cluster
     - name: Deploy
       run: |
-        ./kustomize edit set image myapp=${TKE_IMAGE_URL}:${GITHUB_SHA}
+        ./kustomize edit set image nginx=${TKE_IMAGE_URL}:${GITHUB_SHA}
         ./kustomize build . | kubectl apply -f -
         kubectl -n ${DEPLOY_NAMESPACE} rollout status deployment/${DEPLOYMENT_NAME}
         kubectl -n ${DEPLOY_NAMESPACE} get services -o wide
