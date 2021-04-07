@@ -18,6 +18,6 @@ func main()  {
 
 func HelloWorldHandler(res http.ResponseWriter, req *http.Request)  {
     fmt.Printf("[%s] %s %s\n", time.Now().Format("2006-01-02 15:04:05"), req.Method, req.URL)
-	  hostname, _ := os.Hostname()
-	  fmt.Fprintf(res, "Version: v1, Hostname: %s\n", hostname)
+    hostname, _ := os.Hostname()
+    fmt.Fprintf(res, "Version: v1, Hostname: %s\n", hostname)
 }
